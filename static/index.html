@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProbaFoot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<div id="app" class="pf" data-pf="1" data-dir="terminal" data-theme="dark">
+  <header class="topbar">
+    <div class="brand">
+      <span class="name">ProbaFoot</span>
+      <span class="lbl">5 grands championnats</span>
+    </div>
+    <nav class="tabs" id="tabs"></nav>
+    <div class="tools">
+      <span class="syncinfo"><span class="dot" id="sync-dot"></span><span id="sync-text">…</span></span>
+      <button class="btn" data-task="sync" title="Télécharger les dernières données et recalculer les pronostics">Synchroniser</button>
+      <button class="btn" data-task="backtest" title="Rejouer les matchs passés pour mesurer la fiabilité">Backtest</button>
+      <button class="btn" data-task="learn" title="Ré-apprendre les poids et coefficients à partir des résultats">Apprendre</button>
+      <button class="btn" id="bell-btn" title="Alertes : compositions officielles et paris conseillés">🔔 <span id="bell-n">0</span></button>
+      <button class="btn soft" id="theme-btn">◐ Clair</button>
+    </div>
+  </header>
+  <div id="taskbar" class="taskbar hidden"></div>
+  <div id="view"></div>
+  <div id="bell-panel" class="bell-panel hidden"></div>
+  <div id="tooltip" class="hidden" role="tooltip"></div>
+</div>
+<script src="/static/glossary.js"></script>
+<script src="/static/charts.js"></script>
+<script src="/static/features.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>
